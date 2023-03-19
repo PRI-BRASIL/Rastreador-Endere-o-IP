@@ -1,6 +1,6 @@
 # Rastreador de endereço IP
 
-![Visualização do Design para o Desafio de Codificação do Rastreador de Endereço IP]()
+![Visualização do Mapa Criado](./images/Mapa.png)
 
 ## Bem-vindo! 👋
 
