@@ -1,17 +1,19 @@
 let h2 = document.querySelector('h2');
 
+
 function success(pos){
      console.log(pos.coords.latitude, pos.coords.longitude);
      h2.textContent = `Latitude:${pos.coords.latitude}, Longitude:${pos.coords.longitude}`;
+
      
-     var map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 22);
+     var map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 13);
 
      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+     }).addTo(map);
 
-    L.marker([51.5, -0.09]).addTo(map)
-       .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+     L.marker([pos.coords.latitude, pos.coords.longitude]).addTo(map)
+       .bindPopup('EU estou aqui')
        .openPopup();
 }
 
