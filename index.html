@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-   <title>Rastreador de endereço de IP</title>
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="responsive.css">
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
+
 <body>
- 
+
   <header>
     <h1>IP Address Tracker</h1>
     <div class="input-div">
@@ -25,22 +25,21 @@
       <button class="btn">
         <img src="images/icon-arrow.svg" alt="arrow">
       </button>
-     
     </div>
 
     <div class="info-div">
       <div class="info">
-        <h2>ENDEREÇO ​​DE IP</h2>
+        <h2>IP ADDRESS</h2>
         <P class="ip">000.000.000.000</P>
       </div>
       <div class="bar"></div>
       <div class="info">
-        <h2>LOCALIZAÇÃO</h2>
+        <h2>LOCATION</h2>
         <P class="location">São Paulo, Brazil</P>
       </div>
       <div class="bar"></div>
       <div class="info">
-        <h2>FUSO HORARIO</h2>
+        <h2>TIME ZONE</h2>
         <P class="timezone">UTC -03:00</P>
       </div>
       <div class="bar"></div>
@@ -51,8 +50,10 @@
     </div>
   </header>
 
+  <div id="map"></div>
+
   <script type="module" src="script.js"></script>
   <script src="functions.js"></script>
-
 </body>
+
 </html>
