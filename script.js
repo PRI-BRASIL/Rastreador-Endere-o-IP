@@ -1,5 +1,46 @@
-let h2 = document.querySelector('h2');
+// função de solicitação de busca
+export async function onFetch(url) {
+    const response = await fetch(url)
+    const json = await response.json()
+    return json
+}
+
+//Função de validação de regex IP
+export function validateIPaddress(inputText) {
+    const ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
+    if (inputText.match(ipformat)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+//Função de preenchimento dos campos (IP, localização, fuso horário e ISP)
+export function fillInFields(obj) {
+    const ip = document.querySelector('.ip')
+    const location = document.querySelector('.location')
+    const timezone = document.querySelector('.timezone')
+    const isp = document.querySelector('.isp')
+
+    ip.innerHTML = obj.ip
+    location.innerHTML = `${obj.location.city}, ${obj.location.region}`
+    timezone.innerHTML = `UTC ${obj.location.timezone}`
+    isp.innerHTML = obj.isp
+}
+
+
+//INICIALIZA A FUNÇÃO MAPA
 var map;
+
+export function initializeMap(obj) {
+    const lat = obj.location.lat
+    const lng = obj.location.lng
+
+
+    if (map === undefined) 
 console.log(map);
 
 function success(pos){
@@ -33,4 +74,4 @@ var watchID = navigator.geolocation.watchPosition(success, error,{
 
 //navigator.geolocation.clearwatch(watchID);não vai mais monitorar a posição atual
 
-
+}
